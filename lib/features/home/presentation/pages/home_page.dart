@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_demo/features/counter/presentation/pages/counter_page.dart';
 
 class HomePage extends StatelessWidget {
   final String title;
@@ -12,9 +13,21 @@ class HomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: Center(
-        child: Text(
-          title,
-          style: Theme.of(context).textTheme.bodyLarge,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CounterPage(),
+                  ),
+                );
+              },
+              child: const Text('Counter Demo'),
+            ),
+          ],
         ),
       ),
     );
