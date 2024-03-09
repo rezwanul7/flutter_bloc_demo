@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_demo/features/calculator/presentation/pages/calculator_page.dart';
 import 'package:flutter_bloc_demo/features/counter/presentation/pages/counter_page.dart';
 import 'package:flutter_bloc_demo/features/counter_number_model/presentation/pages/counter_number_model_page.dart';
 
@@ -37,6 +38,16 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Counter Number Model Demo'),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CalculatorPage(),
+                  ),
+                );
+              },
+              child: const Text('Calculator Demo'),
             ),
           ],
         ),

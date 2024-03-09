@@ -36,3 +36,6 @@ I/flutter (13160): Increment Button Clicked 3 times
 I/flutter (13160): Increment Button Clicked 4 times
 I/flutter (13160): UI update initiated for : NumberModel{number: 2}
 ```
+
+## Simple calculator
+Demonstrating add operation to calculate the sum of two integer numbers. 
