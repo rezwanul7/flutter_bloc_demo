@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_demo/features/calculator/presentation/pages/calculator_page.dart';
 import 'package:flutter_bloc_demo/features/counter/presentation/pages/counter_page.dart';
 import 'package:flutter_bloc_demo/features/counter_number_model/presentation/pages/counter_number_model_page.dart';
+import 'package:flutter_bloc_demo/features/counter_two_screen/presentation/pages/counter_page.dart';
 
 class HomePage extends StatelessWidget {
   final String title;
@@ -48,6 +49,16 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Calculator Demo'),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CounterTwoScreenPage(),
+                  ),
+                );
+              },
+              child: const Text('Counter MultiScreen'),
             ),
           ],
         ),
