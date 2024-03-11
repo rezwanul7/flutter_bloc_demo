@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 abstract class CalculatorState extends Equatable {
+  @override
   List<Object?> get props => [];
 }
 
@@ -11,6 +12,7 @@ class CalculatorResultState extends CalculatorState {
 
   CalculatorResultState({required this.result});
 
+  @override
   List<Object?> get props => [result];
 }
 
@@ -19,5 +21,6 @@ class CalculatorErrorState extends CalculatorState {
 
   CalculatorErrorState({required this.errorMessage});
 
+  @override
   List<Object?> get props => [errorMessage];
 }

@@ -9,7 +9,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         var number1 = double.parse(event.number1);
         var number2 = double.parse(event.number2);
         emit(CalculatorResultState(result: number1 + number2));
-      } on FormatException catch (e) {
+      } on FormatException {
         emit(CalculatorErrorState(errorMessage: "Invalid Input"));
       }
     });
@@ -18,7 +18,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         var number1 = double.parse(event.number1);
         var number2 = double.parse(event.number2);
         emit(CalculatorResultState(result: number1 - number2));
-      } on Exception catch (e) {
+      } on Exception {
         emit(CalculatorErrorState(errorMessage: "Invalid Input"));
       }
     });
@@ -27,7 +27,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         var number1 = double.parse(event.number1);
         var number2 = double.parse(event.number2);
         emit(CalculatorResultState(result: number1 * number2));
-      } on Exception catch (e) {
+      } on Exception {
         emit(CalculatorErrorState(errorMessage: "Invalid Input"));
       }
     });
@@ -36,7 +36,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         var number1 = double.parse(event.number1);
         var number2 = double.parse(event.number2);
         emit(CalculatorResultState(result: number1 / number2));
-      } on Exception catch (e) {
+      } on Exception {
         emit(CalculatorErrorState(errorMessage: "Invalid Input"));
       }
     });
